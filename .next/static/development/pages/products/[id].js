@@ -835,19 +835,19 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 var Product = function Product(_ref) {
   var productImages = _ref.productImages;
-  console.log(productImages);
+  console.log(productImages.length);
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 7
     },
     __self: this
-  }, productImages.map(function (productImage) {
+  }, productImages.length > 0 ? productImages.map(function (productImage) {
     return __jsx("div", {
       key: productImage.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 11
       },
       __self: this
     }, productImage.product_id, " - ", productImage.id, " - ", __jsx("img", {
@@ -855,11 +855,17 @@ var Product = function Product(_ref) {
       alt: "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 9
+        lineNumber: 11
       },
       __self: this
     }), " ");
-  }));
+  }) : __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, "No images for product "));
 }; // call api to get sinlge product data
 
 

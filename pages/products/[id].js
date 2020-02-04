@@ -1,12 +1,15 @@
 import 'isomorphic-fetch';
 
 const Product = ({productImages}) => {
-  console.log(productImages)
+  console.log(productImages.length)
 
   return (
     <div>
       {
-        productImages.map(productImage => <div key={productImage.id}>{productImage.product_id} - {productImage.id} - <img src={productImage.url_tiny} alt=""/> </div>)
+        (productImages.length > 0)
+        ? productImages.map(productImage => 
+        <div key={productImage.id}>{productImage.product_id} - {productImage.id} - <img src={productImage.url_tiny} alt=""/> </div>) 
+        : <div>No images for product </div>
       }
       
     </div>
