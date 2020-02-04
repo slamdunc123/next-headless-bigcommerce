@@ -1,0 +1,1 @@
+{"ast":null,"code":"console.log('410 found');","map":{"version":3,"sources":["/Users/duncan/Development/Repos/next-learn-demo/7.2-api-routes/pages/products2/[id].js"],"names":["console","log"],"mappings":"AAAAA,OAAO,CAACC,GAAR,CAAY,WAAZ","sourcesContent":["console.log('410 found')"]},"metadata":{},"sourceType":"script"}
